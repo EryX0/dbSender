@@ -12,9 +12,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+
     env:
-      VERSION: ${{ github.repository }}
+      VERSION: ${{ env.VERSION }}
 
     steps:
     - uses: actions/checkout@v3
