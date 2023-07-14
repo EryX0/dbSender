@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --t ${{ secrets.DOCKERHUB_USER }}/dbsender:latest  --t ${{ secrets.DOCKERHUB_USER }}/dbsender:${{ vars.VERSION }}
+        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USER }}/dbsender:latest  --tag ${{ secrets.DOCKERHUB_USER }}/dbsender:${{ vars.VERSION }}
 
       - name: Login to Docker Hub
         run: docker login -u ${{ secrets.DOCKERHUB_USER }} -p ${{ secrets.DOCKERHUB_PASS }}
