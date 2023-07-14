@@ -3,10 +3,6 @@ FROM python:3.11.4-slim
 
 # Set the working directory inside the container
 WORKDIR /app
-
-# Copy the application files to the container
-COPY .env.example ./
-RUN cp .env.example .env
 COPY . .
 
 # Install the requirements
