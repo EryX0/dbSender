@@ -11,9 +11,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      VERSION: ${{ env.VERSION }}
-
     steps:
       - uses: actions/checkout@v3
       - name: Build the Docker image
