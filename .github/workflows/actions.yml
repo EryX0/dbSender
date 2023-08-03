@@ -32,4 +32,4 @@ jobs:
           SERVER0_PASSWORD : ${{ secrets.SERVER0_PASSWORD }}
           SERVER0_CAPTION : ${{ secrets.SERVER0_CAPTION }}
 
-        run: python main.py
+        run: python3 main.py
