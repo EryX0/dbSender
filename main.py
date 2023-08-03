@@ -49,6 +49,7 @@ def main() -> None:
     """Run the bot."""
     app = Application.builder().token(env_vars["BOT_API_TOKEN"]).build()
     #run sendDB every two hours
+    print("starting the application...)
     app.job_queue.run_once(sendDB, 15)
     app.run_polling(drop_pending_updates=True)
 
